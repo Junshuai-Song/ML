@@ -8,4 +8,5 @@ Sum up some frequently used machine learning algorithms and data analysis method
   - k-means
   - knn
   - logistic
+  - svm_SMO
 - scripts
