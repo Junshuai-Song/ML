@@ -11,4 +11,5 @@ Sum up some frequently used machine learning algorithms and data analysis method
   - svm_SMO
   - regression
   - Apriori
+  - RandomForest
 - scripts
