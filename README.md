@@ -12,4 +12,5 @@ Sum up some frequently used machine learning algorithms and data analysis method
   - regression
   - Apriori
   - RandomForest
+  - regTrees(回归树 & 模型树)
 - scripts
