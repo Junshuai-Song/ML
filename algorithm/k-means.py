@@ -100,8 +100,4 @@ def k_means_test(k):
     print ans   # 代表k个类型中心
 
 k_means_test(3)
-<<<<<<< HEAD
     
-=======
-    
->>>>>>> 49d456a2a175f3daca606e5d04bc97b2108e4505
