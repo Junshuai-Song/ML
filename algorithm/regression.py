@@ -111,18 +111,31 @@ def rssError(yArr, yHatArr):#计算真实值与与测试的误差，数值越大
     return  ((yArr-yHatArr)**2).sum()   
 
 def test_lwlr():
+<<<<<<< HEAD
     xArr,yArr = loadDataSet('/Users/a1/Downloads/ans.txt')
 #     print lwlr(xArr[0],xArr,yArr,1.0)
 #     print lwlr(xArr[0],xArr,yArr,0.001) 
     # yHat就是预测结果，可以拿来与真实值进行对比
     yHat = lwlrTest(xArr[0:99], xArr[0:99], yArr[0:99], 0.01)    # 这里k=1是，效果与最小二乘法一样，属于欠拟合；
+=======
+    xArr,yArr = loadDataSet('ex0.txt')
+#     print lwlr(xArr[0],xArr,yArr,1.0)
+#     print lwlr(xArr[0],xArr,yArr,0.001) 
+    # yHat就是预测结果，可以拿来与真实值进行对比
+    yHat = lwlrTest(xArr[0:99], xArr[0:99], yArr[0:99], 0.05)    # 这里k=1是，效果与最小二乘法一样，属于欠拟合；
+>>>>>>> 49d456a2a175f3daca606e5d04bc97b2108e4505
     # 0.01时效果较好；
     # 0.003时，拟合的曲线与原数据过于拟合
     print rssError(yArr[0:99], yHat.T)
     
     # 在新的数据集上进行测试
+<<<<<<< HEAD
 #     yHat = lwlrTest(xArr[100:199], xArr[0:99], yArr[0:99], 0.01) 
 #     print rssError(yArr[100:199], yHat.T)
+=======
+    yHat = lwlrTest(xArr[100:199], xArr[0:99], yArr[0:99], 0.05) 
+    print rssError(yArr[100:199], yHat.T)
+>>>>>>> 49d456a2a175f3daca606e5d04bc97b2108e4505
     
     # 画图
 #     xMat = mat(xArr)
@@ -137,6 +150,7 @@ def test_lwlr():
     
 test_lwlr()
 
+<<<<<<< HEAD
 
 
 
@@ -146,3 +160,5 @@ test_lwlr()
 
 
  
+=======
+>>>>>>> 49d456a2a175f3daca606e5d04bc97b2108e4505
