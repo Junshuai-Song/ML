@@ -43,7 +43,7 @@ Created on 2016年5月16日
     
 '''
 
-import algorithms
+from algorithms import *   # 如果要明确引入包名下的某个模块，需要再加.，例如：from algorithms.regTrees import *
 from numpy import *
 
 if __name__ == "__main__":
@@ -52,12 +52,12 @@ if __name__ == "__main__":
     for i in range(51):
         if i==0 : continue
         # 使用某个音乐人的数据集，训练模型树
-        trainMat = mat(loadDataSet('/Users/a1/Downloads/train/ans'+str(i)+'.txt'))
-        myTree = createTree(trainMat, modelLeaf, modelErr, (1,80))  # 这里两个误差的控制！需要再调研一下
+        trainMat = mat(regTrees.loadDataSet('/Users/a1/Downloads/train/ans'+str(i)+'.txt'))
+        myTree = regTrees.createTree(trainMat, regTrees.modelLeaf, regTrees.modelErr, (1,80))  # 这里两个误差的控制！需要再调研一下
         
         # 使用训练好的模型树，对测试集进行测试，并输出结果
-        testMat = mat(loadDataSet('/Users/a1/Downloads/test/test.txt'))
-        yHat = createForeCast(myTree, testMat[:,0:4], modelTreeEval)
+        testMat = mat(regTrees.loadDataSet('/Users/a1/Downloads/test/test.txt'))
+        yHat = regTrees.createForeCast(myTree, testMat[:,0:4], regTrees.modelTreeEval)
         for j in range(shape(yHat)[0]):
             print yHat[j,0]
         
@@ -66,5 +66,5 @@ if __name__ == "__main__":
         #ans += abs(t)
     #print ans   # 输出总体50个样本的拟合效果和
     
-        
+
         
