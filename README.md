@@ -16,4 +16,5 @@ Sum up some frequently used machine learning algorithms and data analysis method
 - ali
   - music 
 - ml
-  - scripts
+  - 1_foundation.py
+  - main.py
